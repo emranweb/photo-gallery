@@ -4,7 +4,7 @@ import UploadFrom from "./comps/UploadForm";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container mx-auto">
       <Title/>
       <UploadFrom />
     </div>
