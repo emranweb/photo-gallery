@@ -11,6 +11,7 @@ function UploadFrom() {
 
     if (inputFile && types.includes(inputFile.type)) {
       setFile(inputFile);
+      setError(null);
     } else {
       setError("Plese Insert Image");
       setFile(null);
