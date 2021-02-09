@@ -11,10 +11,23 @@ const UseStorage = (file)=>{
    
     const storageRef = projectStorage.ref(file.name);
 
+    storageRef.put(file).on("state_changed", (snap)=>{
+       
+      let parcentage = (snap.bytesTransferred / snap.totalBytes) * 100;
+       
+       setProgress(parcentage);
+
+    },(error)=>{
+      setError(error)
+    }, async ()=>{
+      const url =  storageRef.getDownloadURL();
+      setUrl(url);
+    })
+
   },[file])
 
   return (
-      <h1>User Storae Function</h1>
+      [progress, url, error]
   )
 
 }
