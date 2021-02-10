@@ -12,11 +12,7 @@ function UploadFrom() {
 
     if (inputFile && types.includes(inputFile.type)) {
       setFile(inputFile);
-<<<<<<< HEAD
-      setError(null);
-=======
       setError("");
->>>>>>> 620e9ee4067d572e77f5347b8b81001ca2a0846a
     } else {
       setError("Plese Insert Image");
       setFile(null);
