@@ -21,9 +21,16 @@ position: relative;
 
 .close{
   position: absolute;
-  width: 30px;
-  height: 30px;
-  background: red;
+  width: 20px;
+  height: 20px;
+  background: rgb(231, 97, 97);
   right: -10px;
   top: -10px;
+  text-align-last: center;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
 }

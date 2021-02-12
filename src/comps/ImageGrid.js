@@ -1,5 +1,6 @@
 import React from "react";
 import UseFirestore from "../hooks/UseFirestore";
+import {motion} from "framer-motion";
 
 const ImageGrid = (props) => {
   const { doc } = UseFirestore("images");
@@ -9,9 +10,9 @@ const ImageGrid = (props) => {
       {doc &&
         doc.map((item) => {
           return (
-            <div className="item cursor-pointer" key={item.id} onClick={()=>props.image(item.url)}>
-              <img src={item.url} />
-            </div>
+            <motion.div className="item cursor-pointer opacity-50" key={item.id} onClick={()=>props.image(item.url)} layout whileHover={{opacity:1}}>
+              <motion.img src={item.url} alt="img" initial={{opacity:0}} animate={{opacity:1}} transition ={{delay:1}}/>
+            </motion.div>
           );
         })}
     </div>
