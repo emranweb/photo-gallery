@@ -1,14 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
-
-:root{
-  --primary: #efb6b2;
-  --secondary: #4e4e4e;
-  --error: #ff4a4a;
+.modal-wrapper{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000ba;
 }
 
-/* base styles & title */
-body{
-  font-family: "Noto Serif";
-  color: var(--secondary);
+.modal-wrapper img {
+  border: 5px solid #fff;
+}
+
+.image-warpper{
+position: relative;
+}
+
+.close{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: red;
+  right: -10px;
+  top: -10px;
 }
